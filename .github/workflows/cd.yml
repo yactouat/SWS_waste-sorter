@@ -36,7 +36,7 @@ jobs:
           credentials_json: "${{ secrets.GCP_GH_SA_KEY }}"
 
       # wait for the image to be available in the registry
-      - name: "slepp"
+      - name: "sleep"
         run: 'sleep 10'
 
       # not passing `-allow-unauthenticated` flag here because it is recommended to not let the CD pipeline take the responsibility of setting up authentication
@@ -44,7 +44,7 @@ jobs:
         uses: "google-github-actions/deploy-cloudrun@v1"
         with:
           service: "${{ secrets.CLOUDRUN_SERVICE }}"
-          image: "${{ secrets.GCP_ARTIFACT_REPO }}/waste-sorter:${{ github.sha }}"
+          image: "${{ secrets.GCP_ARTIFACT_REPO }}waste-sorter:${{ github.sha }}"
           # env_vars: |
           #   SOME_ENV_VAR=true
           flags: "--port=5000"
