@@ -1,0 +1,29 @@
+name: cd
+on:
+  # this action will only run on each push to master, if you prefer continuous deployment
+  push:
+    branches: ["master"]
+
+jobs:
+  build-publish-deploy:
+    name: Build, Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      # Build and publish the Docker image to the GCP Artifact Registry
+      - name: Login to GAR
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ secrets.GCP_REGION }}-docker.pkg.dev
+          username: _json_key
+          password: ${{ secrets.GCP_GH_SA_KEY }}
+      - id: docker-push-tagged
+        name: Tag Docker image and push to Google Artifact Registry
+        uses: docker/build-push-action@v3
+        with:
+          file: prod.Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.GCP_ARTIFACT_REPO }}waste-sorter:${{ github.sha }}
