@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outputBoxText {
+    bottom: 40%;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    left: 25%;
+    position: absolute;
+}
+.outputDiv {
+    display: flex;
+}
+
+@media  screen and (max-width: 576px) {
+    .outputBoxText {
+        bottom: 30%;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        left: 15%;
+        position: absolute;
+    }
+}

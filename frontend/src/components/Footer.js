@@ -23,14 +23,16 @@ export const Footer = () => {
             <div className="text-white text-center text-xl font-bold">Wanna Contribute? Check out <a
                 href="https://github.com/yactouat/waste_sorter_demo/issues"
                 className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                target="_blank"
             >
-                <span className="text-blue-900 underline underline-offset-2">The Repo Issues</span>
+                <span className="text-blue-900 underline underline-offset-2">the Repo Issues</span>
             </a>
             </div>
 
             <div className="text-white text-center text-xl font-bold p-4"><a
                 href="https://github.com/yactouat/learning_AI/blob/master/notebooks/waste-sorter/waste-sorter.ipynb"
                 className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                target="_blank"
             >
                 <span className="text-blue-900 underline underline-offset-2">link to the notebook</span>
             </a> from which the model is exported</div>

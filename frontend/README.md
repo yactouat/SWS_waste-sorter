@@ -13,25 +13,25 @@ Follow these steps to install the project:
 
 1. Clone the repository to your local machine using the following command:
 
-```shell script
-   git clone https://github.com/Mansi209aps/waste_sorter_frontend.git
+```bash
+   git clone https://github.com/yactouat/SWS_waste-sorter
 ```
 
 2. Navigate to the project directory:
 
-```shell script
-   cd waste_sorter_frontend
+```bash
+   cd SWS_waste-sorter/frontend
 ```
 3. Install the dependencies:
 
-```shell script
+```bash
    npm install
 ```
 
 # Running the App
 To run the app in development mode, use the following command:
 
-```shell script
+```bash
    npm start
 ```
 This will start the development server and open the app in your default browser. The app will automatically reload if you make any changes to the source code.
