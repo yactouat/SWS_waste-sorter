@@ -29,7 +29,7 @@ that's all, thank you for your time !
 
 ## Code Viz
 
-<https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=yactouat%2Fpips_resources_blog-posts>
+<https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=yactouat%2Fwaste_sorter_demo>
 
 ## Contributors
 
