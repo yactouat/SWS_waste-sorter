@@ -24,7 +24,8 @@ jobs:
         name: Tag Docker image and push to Google Artifact Registry
         uses: docker/build-push-action@v3
         with:
-          file: Dockerfile
+          file: ./api/Dockerfile
+          context: ./api
           push: true
           tags: |
             ${{ secrets.GCP_ARTIFACT_REPO }}waste-sorter:${{ github.sha }}
