@@ -1,10 +1,12 @@
 import base64
 from io import BytesIO
 from flask import Flask, jsonify, render_template, request
+from flask_cors import CORS
 from fastcore.all import *
 from fastai.vision.all import *
 
 app = Flask(__name__)
+CORS(app)
 
 learner = load_learner('/app/export.pkl')
 

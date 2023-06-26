@@ -1,10 +1,11 @@
-FROM fastai/fastai:2021-02-11
+FROM fastai/fastai@sha256:4f695f65038f8986ea79549462a38f6dcd3854ad0d0584b69ed521b076342574
 
 RUN pip install --upgrade pip
 
 WORKDIR /app
-COPY . /app
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./api /app
+RUN pip install setuptools
+RUN pip install --ignore-installed blinker --no-cache-dir -r requirements.txt
 
 ENV FLASK_APP=app.py
 # watch app' files
