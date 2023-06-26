@@ -3,6 +3,7 @@
 - [Strasbourg Waste Sorter (SWS)](#strasbourg-waste-sorter-sws)
   - [what is this ?](#what-is-this-)
   - [CI/CD](#cicd)
+  - [Frontend contributions](#frontend-contributions)
   - [Contribution guidelines](#contribution-guidelines)
   - [Code Viz](#code-viz)
   - [Contributors](#contributors)
@@ -20,6 +21,10 @@ This repo holds the api and frontend code of a waste sorter app' that consists o
 ## CI/CD
 
 There's a CI/CD pipeline in place that builds the Docker image and pushes it to the GCP Artifact Registry, all the way to deployment in a Cloud Run container (check out `./.github/workflows/cicd.yml`). Remember to build the app' before deploying it.
+
+## Frontend contributions
+
+When making a PR changing the React frontend, don't forget to run `npm run build` before pushing your changes, otherwise the deployed app' static assets won't change.
 
 ## Contribution guidelines
 

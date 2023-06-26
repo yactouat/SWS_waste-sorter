@@ -35,8 +35,8 @@ const UploadImage = () => {
               })
               .then(res => res.json())
               .then(data => {
-                setOutputBoxText(data.prediction);
-                setOutputColor(data.prediction);
+                setOutputBoxText(data.prediction == "webcam" ? "gray" : data.prediction);
+                setOutputColor(data.prediction == "webcam" ? "gray" : data.prediction);
                 switch(data.prediction) {
                   case "green":
                       alert('this is glass, throw it in the green trashbin !');
@@ -47,6 +47,8 @@ const UploadImage = () => {
                   case "yellow":
                       alert('that can be recycled and put in the yellow trashbin !');
                     break;
+                  default:
+                      alert('this is not waste');
                 }
               });
         };
@@ -66,7 +68,7 @@ const UploadImage = () => {
                         ...styles.outputBox,
                         backgroundColor: outputColor
                     }}>
-                        <p className="outputBoxText">{outputBoxText}{' '}trashbin</p>
+                        <p className="outputBoxText">{outputBoxText != "gray" ? outputBoxText : ""}{' '}{outputColor != "gray" ? "trashbin": ""}</p>
                     </div>
                 </div>
             )}
