@@ -39,8 +39,6 @@ a big thanks goes to the contributors of this project:
 <tbody>
     <tr>
         <td align="center"><a href="https://github.com/yactouat"><img src="https://avatars.githubusercontent.com/u/37403808?v=4" width="100px;" alt="yactouat"/><br /><sub><b>yactouat</b></sub></a><br /><a href="https://github.com/yactouat"></td>
-    </tr>
-    <tr>
         <td align="center"><a href="https://github.com/ritik2358"><img src="https://avatars.githubusercontent.com/u/98156555?v=4" width="100px;" alt="Ritik Raj"/><br /><sub><b>Ritik Raj</b></sub></a><br /><a href="https://github.com/ritik2358"></td>
     </tr>
 </tbody>
