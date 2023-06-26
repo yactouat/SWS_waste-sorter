@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import { PREDICT_ENDPOINT_URL } from '../constants';
 
 const styles = {
-    selectedImage: {
+    outputBox: {
         width: '300px',
         height: 'auto',
         borderRadius: '10px',
         boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
-        margin: '10px 30px 10px 5px'
+        margin: '20px 30px 20px 20px',
+        position: 'relative'
     },
 };
 
 const UploadImage = () => {
+    const [outputColor, setOutputColor] = useState('gray');
+    const [outputBoxText, setOutputBoxText] = useState('');
     const [selectedImage, setSelectedImage] = useState(null);
 
     const handleImageUpload = (e) => {
@@ -31,33 +34,20 @@ const UploadImage = () => {
                 })
               })
               .then(res => res.json())
-              .then(prediction => {
-                console.log(prediction);
-                // TODO display correct color after identification
-                // var responseDisplay = document.getElementById('response-display');
-                // var img = document.createElement('img');
-                // img.src = reader.result.split(',')[0] + ',' + imageAsBase64;
-                // responseDisplay.appendChild(img);
-                // switch(data.prediction) {
-                //   case "green":
-                //     responseDisplay.innerHTML += `<div 
-                //       style='background-color: green; 
-                //       width: 250px; height: 250px;'></div>`;
-                //       alert('this is glass, throw it in the green trashbin !');
-                //     break;
-                //   case "blue":
-                //     responseDisplay.innerHTML += `<div 
-                //       style='background-color: blue; 
-                //       width: 250px; height: 250px;'>`;
-                //       alert('this is domestic waste, throw it in the blue trashbin !')
-                //     break;
-                //   case "yellow":
-                //     responseDisplay.innerHTML += `<div 
-                //       style='background-color: yellow; 
-                //       width: 250px; height: 250px;'></div>`;
-                //       alert('that can be recycled and put in the yellow trashbin !');
-                //     break;
-                // }
+              .then(data => {
+                setOutputBoxText(data.prediction);
+                setOutputColor(data.prediction);
+                switch(data.prediction) {
+                  case "green":
+                      alert('this is glass, throw it in the green trashbin !');
+                    break;
+                  case "blue":
+                      alert('this is domestic waste, throw it in the blue trashbin !')
+                    break;
+                  case "yellow":
+                      alert('that can be recycled and put in the yellow trashbin !');
+                    break;
+                }
               });
         };
 
@@ -67,9 +57,17 @@ const UploadImage = () => {
     return (
         <div>
             <input type="file" accept="image/*" onChange={handleImageUpload} />
-            {selectedImage && (
-                <div className='center'>
-                    <img src={selectedImage} alt="Selected" style={styles.selectedImage} />
+            {selectedImage && outputBoxText != '' && (
+                <div className="outputDiv">
+                    <div className='center'>
+                        <img src={selectedImage} alt="Selected" style={styles.outputBox} />
+                    </div>
+                    <div className='center' style={{
+                        ...styles.outputBox,
+                        backgroundColor: outputColor
+                    }}>
+                        <p className="outputBoxText">{outputBoxText}{' '}trashbin</p>
+                    </div>
                 </div>
             )}
         </div>
