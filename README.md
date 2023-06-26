@@ -7,6 +7,11 @@
   - [Code Viz](#code-viz)
   - [Contributors](#contributors)
 
+<!-- TODO readme 
+  explain main components of the app'
+  explain how to run locally
+  explain how the app' is deployed
+-->
 
 ## what is this ?
 
