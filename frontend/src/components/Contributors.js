@@ -7,6 +7,9 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     margin: '10px',
+  },
+  contributorsTitle: {
+    margin: '10px'
   }
 };
 
@@ -41,7 +44,10 @@ const Contributors = () => {
 
   return (
     <>
-      <h3 className="text-white">A big thanks goes to the contributors of this project:</h3>
+      <h3 
+        className="text-white"
+        style={styles.contributorsTitle}  
+      >A big thanks goes to the contributors of this project:</h3>
       <div 
         className="text-white text-center text-xl font-bold pb-4 contributors"
         style={styles.contributor}
