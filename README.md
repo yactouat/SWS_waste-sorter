@@ -45,11 +45,12 @@ that's all, thank you for your time !
 
 a big thanks goes to the contributors of this project:
 
-<table>
+<table align="center">
 <tbody>
     <tr>
         <td align="center"><a href="https://github.com/yactouat"><img src="https://avatars.githubusercontent.com/u/37403808?v=4" width="100px;" alt="yactouat"/><br /><sub><b>yactouat</b></sub></a><br /><a href="https://github.com/yactouat"></td>
         <td align="center"><a href="https://github.com/ritik2358"><img src="https://avatars.githubusercontent.com/u/98156555?v=4" width="100px;" alt="Ritik Raj"/><br /><sub><b>Ritik Raj</b></sub></a><br /><a href="https://github.com/ritik2358"></td>
+         <td align="center"><a href="https://github.com/aharonYK"><img src="https://avatars.githubusercontent.com/u/87654852?s=400&u=9eb14ea4266b27f680edee225193f4c69e74a0c1&v=4" width="100px;" alt="yactouat"/><br /><sub><b>Aharon Karsenti</b></sub></a><br /><a href="https://github.com/yactouat"></td>
     </tr>
 </tbody>
 </table>
