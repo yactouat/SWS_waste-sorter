@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const styles = {
+type Styles = {
+  [key: string]: React.CSSProperties;
+};
+
+const styles: Styles = {
   contributor: {
     display: 'flex',
     flexDirection: 'row',
@@ -36,7 +40,7 @@ const Contributors = () => {
       });
   }, []);
 
-  const getOnlyContributorsPart = content => {
+  const getOnlyContributorsPart = (content: string) => {
     return content.substr(
       content.indexOf("a big thanks goes to the contributors of this project:") + 54
     );
@@ -44,14 +48,14 @@ const Contributors = () => {
 
   return (
     <>
-      <h3 
+      <h3
         className="text-white"
-        style={styles.contributorsTitle}  
+        style={styles.contributorsTitle}
       >A big thanks goes to the contributors of this project:</h3>
-      <div 
+      <div
         className="text-white text-center text-xl font-bold pb-4 contributors"
         style={styles.contributor}
-        dangerouslySetInnerHTML={{ __html: getOnlyContributorsPart(readmeContent) }} 
+        dangerouslySetInnerHTML={{ __html: getOnlyContributorsPart(readmeContent) }}
       />
     </>
 
