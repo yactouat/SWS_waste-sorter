@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.contributors {
+    display: flex;
+    gap: 10px;
+}
+
 .outputBoxText {
     bottom: 40%;
     color: white;
