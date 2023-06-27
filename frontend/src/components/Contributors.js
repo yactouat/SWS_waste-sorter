@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const ReadmeComponent = () => {
+const Contributors = () => {
   const owner = 'yactouat';
   const repo = 'SWS_waste-sorter';
   const [readmeContent, setReadmeContent] = useState('');
@@ -31,8 +31,8 @@ const ReadmeComponent = () => {
   };
 
   return (
-    <div className='text-black' dangerouslySetInnerHTML={{ __html: formatCodeBlocks(readmeContent) }} />
+    <div className="text-white text-center text-xl font-bold pb-4" dangerouslySetInnerHTML={{ __html: formatCodeBlocks(readmeContent) }} />
   );
 };
 
-export default ReadmeComponent;
+export default Contributors;

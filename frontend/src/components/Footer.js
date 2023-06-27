@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import ReadmeComponent from './Contribut';
+import ReadmeComponent from './Contributors';
+import Contributors from "./Contributors";
 
 export const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -35,14 +36,6 @@ export const Footer = () => {
             </a>
             </div >
             <br/>
-            <div className="text-blue-900 text-center  text-xl font-bold">
-                
-            <button onClick={toggleVisibility}>Our Contributers</button>
-            <br/>
-      {isVisible &&  <ReadmeComponent className="text-black text-center  text-xl font-bold"/>}
-           
-            </div>
-
             <div className="text-white text-center text-xl font-bold p-4"><a
                 href="https://github.com/yactouat/learning_AI/blob/master/notebooks/waste-sorter/waste-sorter.ipynb"
                 className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
@@ -50,6 +43,11 @@ export const Footer = () => {
             >
                 <span className="text-blue-900 underline underline-offset-2">link to the notebook</span>
             </a> from which the model is exported</div>
+            <div className="text-blue-900 text-center text-xl font-bold py-4">
+                <button onClick={toggleVisibility}>Our Contributors</button>
+                <br/>
+                {isVisible &&  <Contributors/>}
+            </div>
         </div>
 
     );

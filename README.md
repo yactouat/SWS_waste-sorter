@@ -28,8 +28,6 @@ When making a PR changing the React frontend, don't forget to run `npm run build
 
 ## Contribution guidelines
 
-feel free to use this project as a base for your own projects, but please follow these guidelines:
-
 dear past, present, and future contributors, you have my many thanks, but:
 
 - please use comments to explain your code, even if it's obvious to you, it might not be to someone else
