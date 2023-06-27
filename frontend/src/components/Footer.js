@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import ReadmeComponent from './Contribut';
 
 export const Footer = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+      };
     return (
         // Footer Design
         <div className="relative mt-16 bg-green-700">
@@ -27,6 +33,14 @@ export const Footer = () => {
             >
                 <span className="text-blue-900 underline underline-offset-2">the Repo Issues</span>
             </a>
+            </div >
+            <br/>
+            <div className="text-blue-900 text-center  text-xl font-bold">
+                
+            <button onClick={toggleVisibility}>Our Contributers</button>
+            <br/>
+      {isVisible &&  <ReadmeComponent className="text-black text-center  text-xl font-bold"/>}
+           
             </div>
 
             <div className="text-white text-center text-xl font-bold p-4"><a
