@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import img from './waste_sorting_strasbourg.png'
 import UploadImage from "./UploadImage";
 
