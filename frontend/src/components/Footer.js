@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReadmeComponent from './Contributors';
 import Contributors from "./Contributors";
 
 export const Footer = () => {
