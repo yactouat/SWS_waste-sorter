@@ -33,19 +33,22 @@ const Contributors = () => {
       });
   }, []);
 
-  const formatCodeBlocks = content => {
-    const codeBlockRegex = /```(\w+)\n([\s\S]*?)\n```/g;
-    return content.replace(codeBlockRegex, (match, language, code) => {
-      return `<pre><code class="language-${language}">${code}</code></pre>`;
-    }).substring(1795,content.length);
+  const getOnlyContributorsPart = content => {
+    return content.substr(
+      content.indexOf("a big thanks goes to the contributors of this project:") + 54
+    );
   };
 
   return (
-    <div 
-      className="text-white text-center text-xl font-bold pb-4 contributors"
-      style={styles.contributor}
-      dangerouslySetInnerHTML={{ __html: formatCodeBlocks(readmeContent) }} 
-    />
+    <>
+      <h3 className="text-white">A big thanks goes to the contributors of this project:</h3>
+      <div 
+        className="text-white text-center text-xl font-bold pb-4 contributors"
+        style={styles.contributor}
+        dangerouslySetInnerHTML={{ __html: getOnlyContributorsPart(readmeContent) }} 
+      />
+    </>
+
   );
 };
 

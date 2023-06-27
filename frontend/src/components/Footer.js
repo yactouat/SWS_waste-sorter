@@ -43,7 +43,7 @@ export const Footer = () => {
                 <span className="text-blue-900 underline underline-offset-2">link to the notebook</span>
             </a> from which the model is exported</div>
             <div className="text-blue-900 text-center text-xl font-bold py-4">
-                <button onClick={toggleVisibility}>Our Contributors</button>
+                <button onClick={toggleVisibility} className="underline underline-offset-2">Our Contributors</button>
                 <br/>
                 {isVisible &&  <Contributors/>}
             </div>
