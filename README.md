@@ -46,9 +46,12 @@ a big thanks goes to the contributors of this project:
 <table align="center">
 <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/yactouat"><img src="https://avatars.githubusercontent.com/u/37403808?v=4" width="100px;" alt="yactouat"/><br /><sub><b>yactouat</b></sub></a></td>
-      <td align="center"><a href="https://github.com/ritik2358"><img src="https://avatars.githubusercontent.com/u/98156555?v=4" width="100px;" alt="Ritik Raj"/><br /><sub><b>Ritik Raj</b></sub></a></td>
-      <td align="center"><a href="https://github.com/aharonYK"><img src="https://avatars.githubusercontent.com/u/87654852?s=400&u=9eb14ea4266b27f680edee225193f4c69e74a0c1&v=4" width="100px;" alt="yactouat"/><br /><sub><b>Aharon Karsenti</b></sub></a></td>
+      <td align="center"><a href="https://github.com/yactouat"><img src="https://avatars.githubusercontent.com/u/37403808" width="100px;" alt="yactouat"/><br /><sub><b>yactouat</b></sub></a></td>
+      <td align="center"><a href="https://github.com/ritik2358"><img src="https://avatars.githubusercontent.com/u/98156555" width="100px;" alt="Ritik Raj"/><br /><sub><b>Ritik Raj</b></sub></a></td>
+      <td align="center"><a href="https://github.com/aharonYK"><img src="https://avatars.githubusercontent.com/u/87654852" width="100px;" alt="Aharon Karsenti"/><br /><sub><b>Aharon Karsenti</b></sub></a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/etnms"><img src="https://avatars.githubusercontent.com/u/91740611" width="100px;" alt="etnms"/><br /><sub><b>etnms</b></sub></a></td>
     </tr>
 </tbody>
 </table>
