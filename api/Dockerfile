@@ -1,11 +1,11 @@
-FROM fastai/fastai@sha256:4f695f65038f8986ea79549462a38f6dcd3854ad0d0584b69ed521b076342574
+FROM python:3.8.17-slim
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 WORKDIR /app
 COPY ./api /app
-RUN pip install setuptools
-RUN pip install --ignore-installed blinker --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENV FLASK_APP=app.py
 # watch app' files
