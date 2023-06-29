@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type Styles = {
   [key: string]: React.CSSProperties;
@@ -18,9 +19,11 @@ const styles: Styles = {
 };
 
 const Contributors = () => {
-  const owner = 'yactouat';
-  const repo = 'SWS_waste-sorter';
-  const [readmeContent, setReadmeContent] = useState('');
+  const {t} = useTranslation();
+
+  const owner: string = 'yactouat';
+  const repo: string = 'SWS_waste-sorter';
+  const [readmeContent, setReadmeContent] = useState<string>('');
 
   useEffect(() => {
     fetch(`https://api.github.com/repos/${owner}/${repo}/readme`)
@@ -51,7 +54,7 @@ const Contributors = () => {
       <h3
         className="text-white"
         style={styles.contributorsTitle}
-      >A big thanks goes to the contributors of this project:</h3>
+      >{t("contributors.thanks")}</h3>
       <div
         className="text-white text-center text-xl font-bold pb-4 contributors"
         style={styles.contributor}

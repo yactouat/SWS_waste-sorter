@@ -1,9 +1,15 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
 
-    return (
+    const { t, i18n } = useTranslation();
 
+    const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        i18n.changeLanguage(e.currentTarget.value);
+    }
+
+    return (
         // Stciky Navbar
         <nav className='sticky top-0 z-30 w-full'>
             <div className="bg-green-700">
@@ -17,11 +23,16 @@ export const Navbar = () => {
                         >
 
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                                Strasbourg waste sorter
+                                {t("navbar.title")}
                             </span>
+
                         </a>
                     </div>
                 </div>
+                <select onChange={(e) => changeLang(e)}>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                </select>
             </div>
         </nav>
 

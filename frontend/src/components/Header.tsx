@@ -1,8 +1,11 @@
 import React from "react";
 import img from './waste_sorting_strasbourg.png'
 import UploadImage from "./UploadImage";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+
+    const {t} = useTranslation();
     return (
         // Text content
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -36,17 +39,17 @@ export const Header = () => {
                                 height="24"
                             />
                         </svg>
-                        <span className="relative">SELECT</span>
+                        <span className="relative">{t("header.select")}</span>
                     </span>{' '}
-                    IMAGE OF TRASH ITEM TO UPLOAD
+                    {t("header.image-text")}
                 </h2>
                 <UploadImage />
                 <p className="text-base text-gray-700 md:text-lg m-2">
-                    this is an early demo, so the model may be wrong a lot of times
+                {t("header.subtitle")}
                 </p>
 
                 {/* Description */}
-                <div className="m-3 font-sans text-xl">A waste sorter is a machine or system designed to separate different types of waste materials based on their characteristics or composition. Its main purpose is to automate the process of sorting waste, making it more efficient and effective than manual sorting.</div>
+                <div className="m-3 font-sans text-xl">{t("header.description")}</div>
 
                 {/* waste_sorter_image */}
             </div>
