@@ -21,9 +21,9 @@
     },
     "footer" : {
         "contribute" : "Vous voulez contribuer ?",
-        "contribute-text" : "Vous voulez contribuer ? Regarder",
+        "contribute-text" : "Vous voulez contribuer ? Regardez",
         "repo-issues" : "les besoins du répertoire",
-        "notebook" : "lien du notebook",
+        "notebook" : "Lien du notebook",
         "model" : "d'où provient le modèle",
         "contributors" : "Nos contributeurs"
     },
