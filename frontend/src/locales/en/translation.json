@@ -14,6 +14,11 @@
         "yellow": "That can be recycled and put in the yellow trashbin!",
         "default": "This is not waste"
     },
+    "color": {
+        "green" : "green trashbin",
+        "blue" : "blue trashbin",
+        "yellow": "yellow trashbin"
+    },
     "footer" : {
         "contribute" : "Wanna contribute?",
         "contribute-text" : "Wanna Contribute? Check out",

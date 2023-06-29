@@ -24,8 +24,21 @@ const UploadImage = () => {
 
   const [outputColor, setOutputColor] = useState<string>('gray');
   const [outputBoxText, setOutputBoxText] = useState<string>('');
-  // TO DO: selectedImage type may need to be changed?
+  //selectedImage type may need to be changed?
   const [selectedImage, setSelectedImage] = useState<string | ArrayBuffer | null>(null);
+
+  const translateBoxText = (input: string) => {
+    switch (input) {
+      case "blue":
+        return t("color.blue");
+      case "green":
+        return t("color.green");
+      case "yellow":
+        return t("color.yellow");
+      default:
+        return "gray";
+    }
+  }
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const reader: FileReader | null = new FileReader();
@@ -47,7 +60,7 @@ const UploadImage = () => {
       })
         .then(res => res.json())
         .then(data => {
-          setOutputBoxText(data.prediction === "webcam" ? "gray" : data.prediction);
+          setOutputBoxText(data.prediction === "webcam" ? "gray" : translateBoxText(data.prediction));
           setOutputColor(data.prediction === "webcam" ? "gray" : data.prediction);
           switch (data.prediction) {
             case "green":
@@ -70,6 +83,7 @@ const UploadImage = () => {
 
   return (
     <div>
+      { /* There's currently no translation for the default "choose file / no file chosen" since it's not custom */}
       <input type="file" accept="image/*" onChange={handleImageUpload} />
       {selectedImage && outputBoxText !== '' && (
         <div className="outputDiv">
@@ -80,7 +94,7 @@ const UploadImage = () => {
             ...styles.outputBox,
             backgroundColor: outputColor
           }}>
-            <p className="outputBoxText">{outputBoxText !== "gray" ? outputBoxText : ""}{' '}{outputColor !== "gray" ? "trashbin" : ""}</p>
+            <p className="outputBoxText">{outputBoxText !== "gray" ? outputBoxText : ""}</p>
           </div>
         </div>
       )}

@@ -5,7 +5,7 @@
     "header": {
         "select": "CHOISSISEZ",
         "image-text": "UNE IMAGE DE DECHET A DEPOSER",
-        "subtitle": "Il s'agit d'une démo du projet, le modèle peut se tromper très souvent",
+        "subtitle": "Il s'agit d'une démo du projet, le modèle peut se tromper souvent",
         "description": "Un trieur de déchets est une machine ou un système qui a pour but de séparer les différents types de déchets selon leurs caractéristiques ou composition. Son utilisation principale est d'automatiser le processus de tri des déchets, le poussant ainsi à être plus efficace qu'un tri manuel."
     },
     "prediction": {
@@ -13,6 +13,11 @@
         "blue" : "C'est un déchet ménager, jetez le dans la poubelle bleue !",
         "yellow": "Cela peut être recyclé et jeté dans la poubelle jaune !",
         "default": "Ce n'est pas un déchet"
+    },
+    "color": {
+        "green" : "poubelle verte",
+        "blue" : "poubelle bleue",
+        "yellow": "poubelle jaune"
     },
     "footer" : {
         "contribute" : "Vous voulez contribuer ?",

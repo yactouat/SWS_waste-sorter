@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 export const Header = () => {
 
     const {t} = useTranslation();
+    
     return (
         // Text content
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
