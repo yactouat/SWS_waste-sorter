@@ -1,0 +1,33 @@
+{
+    "navbar": {
+        "title": "Strasbourg waste sorter"
+    },
+    "header": {
+        "select": "SELECT",
+        "image-text": "IMAGE OF TRASH ITEM TO UPLOAD",
+        "subtitle": "This is an early demo, so the model may be wrong a lot of times",
+        "description": "A waste sorter is a machine or system designed to separate different types of waste materials based on their characteristics or composition. Its main purpose is to automate the process of sorting waste, making it more efficient and effective than manual sorting."
+    },
+    "prediction": {
+        "green" :"This is glass, throw it in the green trashbin!",
+        "blue" : "This is domestic waste, throw it in the blue trashbin!",
+        "yellow": "That can be recycled and put in the yellow trashbin!",
+        "default": "This is not waste"
+    },
+    "color": {
+        "green" : "green trashbin",
+        "blue" : "blue trashbin",
+        "yellow": "yellow trashbin"
+    },
+    "footer" : {
+        "contribute" : "Wanna contribute?",
+        "contribute-text" : "Wanna Contribute? Check out",
+        "repo-issues" : "the Repo Issues",
+        "notebook" : "Link to the notebook",
+        "model" : "from which the model is exported",
+        "contributors" : "Our Contributors"
+    },
+    "contributors" : {
+        "thanks" : "A big thanks goes to the contributors of this project:"
+    }
+}
