@@ -30,7 +30,7 @@ export const Footer = () => {
 
             {/* Footer Text */}
             <div className="text-white text-center text-xl font-bold">{t("footer.contribute-text")} <a
-                href="https://github.com/yactouat/waste_sorter_demo/issues"
+                href="https://github.com/yactouat/SWS_waste-sorter/issues"
                 className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                 target="_blank"
             >
@@ -39,7 +39,7 @@ export const Footer = () => {
             </div >
             <br />
             <div className="text-white text-center text-xl font-bold p-4"><a
-                href="https://github.com/yactouat/learning_AI/blob/master/notebooks/waste-sorter/waste-sorter.ipynb"
+                href="https://github.com/yactouat/SWS_waste-sorter/blob/master/ai/waste-sorter.ipynb"
                 className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
                 target="_blank"
             >
